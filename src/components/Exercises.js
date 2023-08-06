@@ -11,6 +11,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [exercisesPerPage] = useState(6);
 
   useEffect(() => {
+    console.log(exerciseOptions);
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
@@ -25,7 +26,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     fetchExercisesData();
   }, [bodyPart]);
-
+ console.log(exercises);
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
